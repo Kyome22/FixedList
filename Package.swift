@@ -15,7 +15,10 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "FixedList"
+            name: "FixedList",
+            swiftSettings: [
+                .enableUpcomingFeature("ExistentialAny"),
+            ]
         ),
     ]
 )

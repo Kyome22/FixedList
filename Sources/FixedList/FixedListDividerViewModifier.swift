@@ -30,15 +30,15 @@ struct FixedListDividerViewModifier<Item: FixedListItem>: ViewModifier {
             .padding(.leading)
             .overlay {
                 if index == hoveringIndex {
-                    Canvas { contex, cSize in
+                    Canvas { contex, size in
                         contex.stroke(
                             Path(ellipseIn: CGRect(x: 9, y: 1, width: 5, height: 5)),
                             with: .color(.accentColor.opacity(0.8)),
                             lineWidth: 2
                         )
                         var path = Path()
-                        path.move(to: CGPoint(x: 15, y: 0.5 * cSize.height))
-                        path.addLine(to: CGPoint(x: cSize.width, y: 0.5 * cSize.height))
+                        path.move(to: CGPoint(x: 15, y: 0.5 * size.height))
+                        path.addLine(to: CGPoint(x: size.width, y: 0.5 * size.height))
                         contex.stroke(path, with: .color(.accentColor.opacity(0.8)), lineWidth: 2)
                     }
                 }

@@ -13,7 +13,7 @@ struct FixedListItemViewModifier<Item: FixedListItem>: ViewModifier {
     @Binding var items: [Item]
     @Binding var draggingItem: Item?
     @Binding var hoveringIndex: Int?
-    @State private var size: CGSize = .zero
+    @State private var size = CGSize.zero
 
     func body(content: Content) -> some View {
         content
